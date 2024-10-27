@@ -60,19 +60,19 @@
         <section id="novedades">
             <h2>NOVEDADES</h2>
             <div class="container">
-                <div class="card">
+                <div class="product-card">
                     <img src="img/guitar.jfif" alt="">
                     <h4>Producto</h4>
                     <!-- <a href="">fdsf</a> -->
                     <button type="submit">Agregar al carrito</button>
                 </div>
-                <div class="card">
+                <div class="product-card">
                     <img src="img/guitar2.jpg" alt="">
                     <h4>Producto</h4>
                     <!-- <a href="">fdsf</a> -->
                     <button type="submit">Agregar al carrito</button>
                 </div>
-                <div class="card">
+                <div class="product-card">
                     <img src="img/guitar3.jpg" alt="">
 
                     <h4>Producto</h4>
@@ -133,6 +133,19 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="form-section">
+            <form class="form" action="https://formspree.io/f/xdknqeqd" method="post">
+                <h1>Contáctenos</h1>
+                <label for="nombre" >Nombre:</label> 
+                <input type="text" name="nombre" id="nombre"  placeholder="Nombre">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email"  placeholder="Email">
+                <label for="mensaje">Mensaje:</label> 
+                <textarea name="mensaje" id="mensaje" rows="4"cols="50" placeholder="Escriba aqui su mensaje"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
 
     </main>
