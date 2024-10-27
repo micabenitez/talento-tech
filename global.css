@@ -8,27 +8,29 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#a7211d;
-    font-family: "Bebas Neue", sans-serif;
+    background-color: #a7211d;
+    font-family: "Anton", sans-serif;
+    font-weight: 300;
     font-style: normal;
     padding: 0 10px;
 }
 
 .carrito i{
-    margin-right: 10px;
-    margin-left: 5px;
+    margin-left: 16px;
+    margin-right: 5px;
 }
+
 .menu {
     display: none;
 }
 
-nav ul{
-   position: relative;
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
-   font-size: larger;
+nav ul {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 20px;
 }
 
 .logo img {
@@ -41,22 +43,22 @@ li {
 }
 
 li a:hover {
-   color: #e7d6af;
+    color: #e7d6af;
 }
 
 li a {
     color: #f2e8df;
     text-decoration: none;
-    margin: 15px;
+    margin: 20px;
 }
 
 @media (max-width: 768px) {
     li {
         display: none;
     }
+
     .menu {
         display: inline;
-
     }
 }
 
@@ -72,7 +74,7 @@ footer {
 
 footer p {
     text-align: center;
-    margin: 0; 
+    margin: 0;
 }
 
 footer img {

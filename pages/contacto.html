@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.ico" type="image/x-icon" />
+    <!--FUENTES-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <script src="https://kit.fontawesome.com/a1e673ff15.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/global.css">
     <link rel="stylesheet" href="/css/contacto.css">
     <title>Music Store</title>
@@ -22,33 +25,37 @@
         </div>
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                    <path
-                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
-                </svg></a></li>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="productos.html">PRODUCTOS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
+        <div class="carrito">
+            <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-bars fa-lg menu" style="color: #ffffff;"></i>
+        </div>
     </header>
-    <h1>Contactos</h1>
+
     
     <main>
-        <section >
+        <section id="form-section">
             <form class="form" action="https://formspree.io/f/xdknqeqd" method="post">
-                <label for="nombre">Nombre:</label> <input type="text" name="nombre" id="nombre" required>
-                <label for="email">Correo electronico:</label> <input type="email" name="email" id="email" required>
-                <label for="mensaje">Mensaje:</label> <textarea name="mensaje" id="mensaje" rows="4"
-                    cols="50"></textarea>
-
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <h1>Contáctenos</h1>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" rows="4" cols="50"
+                    placeholder="Escriba aqui su mensaje"></textarea>
+                <button type="submit">Enviar</button>
             </form>
         </section>
+
     </main>
 
     <footer>
+        <img src="img/logo.webp" alt="">
         <p>© 2024 Todos los derechos reservados.</p>
     </footer>
 
