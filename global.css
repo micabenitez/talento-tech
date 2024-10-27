@@ -6,50 +6,38 @@ body {
 
 header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color:#a7211d;
-    justify-content: space-between;
     font-family: "Bebas Neue", sans-serif;
     font-style: normal;
+    padding: 0 10px;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.carrito i{
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.menu {
+    display: none;
 }
 
-/* .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: "Edu AU VIC WA NT Guides", cursive;
-    font-optical-sizing: auto;
-    font-style: normal;
-} */
+nav ul{
+   position: relative;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   font-size: larger;
+}
 
 .logo img {
-    height: 90px;
+    height: 80px;
     margin-right: 10px;
 }
 
-/*background-color: #eab58c*/
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-size: larger;
-}
-
-.carrito {
-    margin-right: 20px;
-}
-
 li {
-    float: left;
+    display: inline-block;
 }
 
 li a:hover {
@@ -60,6 +48,16 @@ li a {
     color: #f2e8df;
     text-decoration: none;
     margin: 15px;
+}
+
+@media (max-width: 768px) {
+    li {
+        display: none;
+    }
+    .menu {
+        display: inline;
+
+    }
 }
 
 footer {
