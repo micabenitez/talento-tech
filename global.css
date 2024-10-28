@@ -5,15 +5,25 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
     background-color: #a7211d;
     font-family: "Anton", sans-serif;
     font-weight: 300;
     font-style: normal;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.elems {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
 .nav-close, .menu {
     display: none;
 }
@@ -58,13 +68,20 @@ li a {
 
 
 @media (max-width: 768px) {
-    nav {
-        position: relative;
-        height: 100%;
+    header {
+        position: fixed;
+        display: block;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #a7211d;
+      }
+      
+      nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
+      }
 
     .nav-close,
     .menu {
@@ -115,13 +132,13 @@ li a {
         color: white;
         margin-top: 20px;
         display: flex;
-        font-size: 35px;
+        font-size: 20px;
         font-family: Arial, Helvetica, sans-serif;
     }
 
     .nav-list {
         flex-direction: column;
-        row-gap: 30px;
+        row-gap: 20px;
     }
 
     .nav-link {
