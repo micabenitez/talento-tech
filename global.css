@@ -56,14 +56,6 @@ li a {
     margin: 20px;
 }
 
-@media (max-width: 768px) {
-    li {
-        display: none;
-    }
-}
-.logo img {
-    width: 100px;
-}
 
 @media (max-width: 768px) {
     nav {
@@ -85,7 +77,7 @@ li a {
         position: fixed;
         left: -100%;
         top: 0;
-        background-color: red;
+        background-color: #a7211d;
         width: 100%;
         height: 100%;
         padding: 30px;
@@ -119,12 +111,12 @@ li a {
         right: 1.5rem;
     }
 
-
     .nav-list {
         color: white;
         margin-top: 20px;
         display: flex;
-        font-size: 20px;
+        font-size: 35px;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     .nav-list {
