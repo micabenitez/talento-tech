@@ -8,7 +8,7 @@ header {
     display: block;
     background-color: #a7211d;
     font-family: "Anton", sans-serif;
-    font-weight: 300;
+    color: #ffeccd;
     font-style: normal;
 }
 
@@ -18,6 +18,14 @@ nav {
     align-items: center;
 }
 
+.active {
+    color: #dd9b58;
+}
+
+.nav-list {
+    display: flex;
+    gap: 22px;
+}
 .elems {
     display: flex;
     justify-content: flex-end;
@@ -28,13 +36,16 @@ nav {
     display: none;
 }
 
-nav ul {
-
+.nav-list {
     list-style: none;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 22px;
+}
+
+.nav-item {
+    display: inline-block;
+    position: relative;
 }
 
 .carrito {
@@ -48,24 +59,27 @@ nav ul {
 }
 
 .logo img {
-    height: 100px;
-    width: 90px;
+    height: 70px;
+    width: 70px;
 }
 
-li {
-    display: inline-block;
-}
-
-li a:hover {
-    color: #e7d6af;
-}
-
-li a {
+.nav-link:hover {
     color: #f2e8df;
-    text-decoration: none;
-    margin: 20px;
+}
+.nav-link:hover::before{
+    width: 100%;
 }
 
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width:0;
+    height: 4px;  
+    background: white;
+    transition: all .5s;
+}
 
 @media (max-width: 768px) {
     header {
@@ -97,7 +111,7 @@ li a {
         background-color: #a7211d;
         width: 100%;
         height: 100%;
-        padding: 30px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -125,16 +139,16 @@ li a {
 
     .nav-close {
         position: absolute;
-        top: 1rem;
-        right: 1.5rem;
+        top: 15px;
+        right: 50px;
     }
 
     .nav-list {
         color: white;
         margin-top: 20px;
         display: flex;
-        font-size: 22px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-family: "Anton", sans-serif;
     }
 
     .nav-list {
@@ -167,7 +181,7 @@ footer {
     background-color: #751405;
     color: #e7d6af;
     padding: 10px;
-    height: 20rem;
+    height: 13rem;
 }
 
 footer p {
