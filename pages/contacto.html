@@ -52,19 +52,17 @@
 		</nav>
 	</header>
 
-
-    
     <main>
+        <h1>Contáctanos</h1>
         <section id="form-section">
             <form class="form" action="https://formspree.io/f/xdknqeqd" method="post">
-                <h1>Contáctenos</h1>
                 <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="email" name="email" id="email" placeholder="Email" required>
                 <label for="mensaje">Mensaje:</label>
                 <textarea name="mensaje" id="mensaje" rows="4" cols="50"
-                    placeholder="Escriba aqui su mensaje"></textarea>
+                    placeholder="Escriba aqui su mensaje" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </section>
