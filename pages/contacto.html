@@ -41,9 +41,24 @@
 				</div>
 			</div>
 
-			<div class="elems">
+            <div class="elems">
 				<div class="carrito">
-					<i class="ri-shopping-cart-2-line"></i>
+					<button class="btn-cart"><i class="ri-shopping-cart-2-line"></i></button>
+					<div class="carrito-counter">
+						<span class="cont-products">0</span>
+					</div>
+					<div class="carrito-content carrito-closed">
+						<div class="carrito-header">
+							<h2>Carrito</h2>
+							<button id="vaciar-carrito">Vaciar Carrito</button>
+						</div>
+						<div id="cart-body"></div>
+
+						<div class="total">
+							<h3 style="color: black;">Total:</h3>
+							<span id="total" style="color: black;">0</span>
+						</div>
+					</div>
 				</div>
 				<div class="menu" id="menu">
 					<i class="ri-menu-line"></i>
@@ -53,20 +68,21 @@
 	</header>
 
     <main>
+        <!-- CONTACTO -->
         <h1>Contáctanos</h1>
-        <section id="form-section">
-            <form class="form" action="https://formspree.io/f/xdknqeqd" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Email" required>
-                <label for="mensaje">Mensaje:</label>
-                <textarea name="mensaje" id="mensaje" rows="4" cols="50"
-                    placeholder="Escriba aqui su mensaje" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-
+		<section id="form-section">
+			<form id="form" action="https://formspree.io/f/xdknqeqd" method="post">
+				<h1>Contáctenos</h1>
+				<label for="nombre">Nombre:</label>
+				<input type="text" name="nombre" id="nombre" placeholder="Nombre">
+				<label for="email">Email:</label>
+				<input type="email" name="email" id="email" placeholder="Email">
+				<label for="mensaje">Mensaje:</label>
+				<textarea name="mensaje" id="mensaje" rows="4" cols="50"
+					placeholder="Escriba aqui su mensaje"></textarea>
+				<button type="submit" id="btnEnviar">Enviar</button>
+			</form>
+		</section>
     </main>
 
     <footer>
@@ -77,8 +93,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <script src="/talento-tech/js/menu.js">
-	</script>
+    <script src="/talento-tech/js/menu.js"></script>
+	<script src="/talento-tech/js/carrito.js"></script>
+	<script src="/talento-tech/js/form.js"></script>
 </body>
 
 </html>

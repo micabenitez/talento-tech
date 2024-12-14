@@ -1,5 +1,5 @@
 /* CARDS */
-.container {
+.container-index {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -12,12 +12,29 @@
     gap: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 20px;
+    border: 1px solid #d3d3d3;
 }
 
 .product-card img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
+
+.product-card span {
+    font-weight: bold;
+    font-size: large;
+}
+
+.btn-add-cart {
+    padding: 10px 20px;
+    background-color: #a7211d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10rem;
+}
+
 
 #novedades h2 {
     display: block;
@@ -29,6 +46,7 @@
     display: flex;
     flex-direction: column;
     margin: 20px;
+    height: 44rem;
 }
 
 /* VIDEO */
@@ -51,21 +69,25 @@
 }
 
 .video-description {
-    width: 60%;
+    width: 80%;
+    height: 100%;
     font-size: 20px;
     color: black;
     padding: 15px;
     font-family: "Bebas Neue", sans-serif;
     font-style: normal;
 }
-
+.btn-video {
+    padding: 6px;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    color: black;
+    border: black 2px solid;
+}
 /* RESEÑAS */
 #resenias {
     margin: 20px;
-}
-
-#resenias h2 {
-    text-align: center;
+    height: 30rem;
 }
 
 .resenias-container {
@@ -84,6 +106,7 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background-color: white;
     border-radius: 20px;
+    border: 1px solid #d3d3d3;
     margin: 20px;
 }
 
@@ -97,6 +120,18 @@
     width: 120px;
 }
 
+.resenias-container .foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: tomato;
+}
+
+.resenias-title {
+    text-align: center;
+    margin-top: 40px;
+}
+
 /* FORM */
 
 #form-section {
@@ -105,7 +140,7 @@
     background-color: #fcf3e3;
 }
 
-.form {
+#form {
     width: 500px;
     padding: 30px;
     margin: auto;
@@ -114,18 +149,18 @@
     font-style: normal;
 }
 
-.form h1 {
+#form h1 {
     text-align: center;
     margin: 0;
 }
 
-.form label {
+#form label {
     display: block;
     margin: 20px 0;
     margin-left: 10px;
 }
 
-.form input, textarea, .form > button {
+#form input, textarea, .form > button {
     width: 100%;
     padding: 10px;
     outline: none;
@@ -170,11 +205,15 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
         font-size: 15px;
     }
     
+    #resenias {
+        margin: 20px;
+        height: 63rem;
+    }
 
 }
 
 @media (max-width:768px) {
-    .form{
+    #form{
         width: 100%;
     }
 }
