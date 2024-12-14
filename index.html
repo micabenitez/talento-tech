@@ -41,15 +41,21 @@
 
 			<div class="elems">
 				<div class="carrito">
-					<i class="ri-shopping-cart-2-line"></i>
-					<div class="carrito-content">
-						<div></div>
-						<h2 class="carrito-title">Carrito</h2>
-						<ul id="lista-carrito">
-							<li><div>producto</div></li>
-							<li><div>producto</div></li>
-						</ul>
-						<button id="vaciar-carrito">Vaciar Carrito</button>
+					<button class="btn-cart"><i class="ri-shopping-cart-2-line"></i></button>
+					<div class="carrito-counter">
+						<span class="cont-products">0</span>
+					</div>
+					<div class="carrito-content carrito-closed">
+						<div class="carrito-header">
+							<h2>Carrito</h2>
+							<button id="vaciar-carrito">Vaciar Carrito</button>
+						</div>
+						<div id="cart-body"></div>
+
+						<div class="total">
+							<h3 style="color: black;">Total:</h3>
+							<span id="total" style="color: black;">0</span>
+						</div>
 					</div>
 				</div>
 				<div class="menu" id="menu">
