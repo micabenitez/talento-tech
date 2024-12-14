@@ -42,7 +42,22 @@
 
 			<div class="elems">
 				<div class="carrito">
-					<i class="ri-shopping-cart-2-line"></i>
+					<button class="btn-cart"><i class="ri-shopping-cart-2-line"></i></button>
+					<div class="carrito-counter">
+						<span class="cont-products">0</span>
+					</div>
+					<div class="carrito-content carrito-closed">
+						<div class="carrito-header">
+							<h2>Carrito</h2>
+							<button id="vaciar-carrito">Vaciar Carrito</button>
+						</div>
+						<div id="cart-body"></div>
+
+						<div class="total">
+							<h3 style="color: black;">Total:</h3>
+							<span id="total" style="color: black;">0</span>
+						</div>
+					</div>
 				</div>
 				<div class="menu" id="menu">
 					<i class="ri-menu-line"></i>
@@ -54,49 +69,7 @@
 
 	<main>
 		<section>
-			<div class="container">
-				<div class="product-card">
-					<img src="/talento-tech/img/guitar.jfif" alt="">
-					<h2>Producto</h2>
-					<a href="">Ver</a>
-				</div>
-				<div class="product-card">
-					<img src="/talento-tech/img/guitar.jfif" alt="">
-					<h2>Producto</h2>
-					<a href="">Ver</a>
-				</div>
-				<div class="product-card">
-					<img src="/talento-tech/img/guitar.jfif" alt="">
-					<h2>Producto</h2>
-					<a href="">Ver</a>
-				</div>
-				<div class="product-card">
-					<img src="/talento-tech/img/guitar.jfif" alt="">
-					<h2>Producto</h2>
-					<a href="">Ver</a>
-				</div>
-				<div class="product-card">
-					<img src="/talento-tech/img/guitar.jfif" alt="">
-					<h2>Producto</h2>
-					<a href="">Ver</a>
-				</div>
-				<div class="product-card">
-					<img src="/talento-tech/img/guitar.jfif" alt="">
-					<h2>Producto</h2>
-					<a href="">Ver</a>
-				</div>
-				<div class="product-card">
-					<img src="/talento-tech/img/guitar.jfif" alt="">
-					<h2>Producto</h2>
-					<a href="">Ver</a>
-				</div>
-				<div class="product-card">
-					<img src="/talento-tech/img/guitar.jfif" alt="">
-					<h2>Producto</h2>
-					<a href="">Ver</a>
-				</div>
-
-			</div>
+			<div class="container"></div>
 		</section>
 	</main>
 
@@ -109,8 +82,9 @@
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
 		
-	<script src="/talento-tech/js/menu.js">
-	</script>
+		<script src="/js/menu.js"></script>
+		<script src="/js/carrito.js"></script>
+		<script src="/js/products.js"></script>
 </body>
 
 </html>
