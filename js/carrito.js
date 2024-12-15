@@ -3,8 +3,13 @@ const btnCarrito = document.querySelector('.btn-cart');
 const cartContent = document.querySelector('.carrito-content');
 const btnVaciar = document.querySelector('#vaciar-carrito');
 const cartBody = document.querySelector('#cart-body');
-const totalCompra = document.querySelector('#total');
+const totalCompra = document.querySelector('#precio-total');
 const cartCounter = document.querySelector('.cont-products');
+const btnCerrarCarrito = document.querySelector('#cart-close');
+
+btnCerrarCarrito.addEventListener('click', () => {
+    cartContent.classList.add('carrito-closed');
+})
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -17,8 +22,9 @@ btnVaciar.addEventListener('click', () => {
     cartBody.innerHTML = '';
     cartBody.appendChild(carritoVacio);
     carrito = [];
+    total = 0;
     localStorage.removeItem('carrito');
-    totalCompra.textContent = 0;
+    totalCompra.textContent = '$'+ total.toFixed(2);
     cartCounter.textContent = 0; 
 })
 
@@ -88,7 +94,7 @@ function actualizarCarrito() {
 
         cartBody.appendChild(card);
         total += parseInt(product.precio.slice(1) * parseInt(product.qty)); 
-        totalCompra.textContent = total.toFixed(2);
+        totalCompra.textContent = `$${total.toFixed(2)}`;
         cartCounter.textContent = carrito.length;
     })
 }
@@ -102,7 +108,7 @@ function eliminarProducto(id) {
         localStorage.setItem('carrito', JSON.stringify(carrito));
     }
     total -= parseInt(product.precio.slice(1));
-    totalCompra.textContent = total.toFixed(2);
+    totalCompra.textContent = `$${total.toFixed(2)}`;
     contadorCarrito()
 }
 

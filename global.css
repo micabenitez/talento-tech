@@ -71,6 +71,7 @@ nav {
 
 .carrito-header{
     color: black;
+    font-size: large;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,8 +83,9 @@ nav {
 }
 
 .carrito-content {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: absolute;
-    padding: 2rem;
+    padding: 1rem 2rem 0.2rem 2rem;
     top: 3rem;
     right: 0;
     background-color: white;
@@ -111,7 +113,12 @@ nav {
 #cart-body {
     padding: 10px 0;
 }
+
 .carrito-closed {
+    display: none;
+}
+
+#cart-close {
     display: none;
 }
 
@@ -152,12 +159,14 @@ nav {
 
 .carrito-vacio {
     color: black;
+    padding: 2px;
 }
+
 .total {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 2px;
 }
 
 .logo img {
@@ -264,6 +273,28 @@ nav {
         display: inline-flex;
         align-items: center;
         transition: opacity .4s;
+    }
+
+    .carrito-content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f2e8df;
+        z-index: 3;
+        overflow-y: scroll;
+    }
+
+    .carrito-header {
+      margin-top: 3rem;
+    }
+
+    #cart-close {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 50px;
     }
 
 }

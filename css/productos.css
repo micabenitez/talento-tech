@@ -1,19 +1,40 @@
+.products-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 10px;
+}
+
+.products-section .products-title {
+    padding: 30px;
+}
+
 .container {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 20px;
     flex-wrap: wrap;
-    padding: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .product-card {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    align-items: center;
-    gap: 20px;
+    width: 270px;
+    gap: 25px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    padding: 20px;
+    padding: 25px;
+}
+
+.product-card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: 15px;
 }
 
 .product-card img {
@@ -21,8 +42,10 @@
     height: 100%;
     object-fit: cover;
 }
-span {
-    font-weight: bold;
+
+.total #precio-total {
+    font-size: 23px;
+    font-weight: 400;
 }
 
 .btn-add-cart {
@@ -31,9 +54,23 @@ span {
     color: #fff;
     border: none;
     cursor: pointer;
-    border-radius: 10rem;
+    border-radius: 5rem;
+    width: 11rem;
+    align-self: center;
 }
 
 .container > div:hover {
     transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: 95%;
+        height: 100%;
+    } 
+
+    .container {
+        gap: 2rem;
+    }
+    
 }

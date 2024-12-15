@@ -25,9 +25,11 @@ function mostrarProductos(products) {
         card.className = "product-card";
         card.setAttribute("data-id", product._id);
         card.innerHTML = `
-            <img src=${product.img_url} alt="">            
-            <h5>${product.name}</h5>
-            <span>$ ${product.precio}</span>
+            <img src=${product.img_url} alt="">     
+            <div class="info"> 
+                <h5>${product.name}</h5>
+                <span>$${product.precio}</span>            
+            </div>       
             <button class="btn-add-cart">Agregar al carrito</button>
         `;
         productsContainer.appendChild(card);
