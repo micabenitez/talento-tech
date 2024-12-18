@@ -38,7 +38,7 @@ function mostrarProductos(products) {
         productImage.addEventListener("click", (e) => {
             localStorage.setItem("selectedProduct", JSON.stringify(product));
             e.stopPropagation();
-            window.location.href = `productInfo.html?id=${product._id}`;
+            window.location.href = `productDetails.html?id=${product._id}`;
         });
     });
 }
