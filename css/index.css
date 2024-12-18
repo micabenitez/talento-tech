@@ -1,8 +1,28 @@
 /* CARDS */
+#novedades {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 30px;
+    height: 35rem;
+    background-color: white;
+}
+
+#novedades h2 {
+    display: block;
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 25px;
+    border-bottom: 1px solid #d3d3d3;
+    padding: 10px;
+    letter-spacing: 5px;
+}
+
 .container-index {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 .product-card {
@@ -10,7 +30,7 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(179, 178, 178, 0.2) 0px 2px 8px 0px;
     padding: 20px;
     border: 1px solid #d3d3d3;
 }
@@ -35,29 +55,106 @@
     border-radius: 10rem;
 }
 
+/* CARDS - MOBILE DEVICES RESPONSIVE */
+@media (max-width: 768px) {
+    #novedades {        
+        height: auto;
+       align-items: center;
+    }
 
-#novedades h2 {
-    display: block;
-    text-align: left;
-    margin: 25px;
+    .container-index {
+        grid-template-columns: repeat(2, 1fr); 
+        padding: 10px;
+        gap: 15px; 
+        width: 90%;
+    }
+
+    .product-card {
+        padding: 15px;
+        gap: 15px; 
+    }
+
+    .product-card span {
+        font-size: medium;
+    }
+
+    .btn-add-cart {
+        padding: 8px 16px;
+        font-size: small;
+    }
 }
 
-#novedades {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    height: 44rem;
+/* CARDS - SMALL DEVICES RESPONSIVE */
+@media (max-width: 480px) {
+    #novedades {
+        height: auto;
+    }
+    .container-index {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .product-card {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .product-card span {
+        font-size: medium;
+    }
+
+    .btn-add-cart {
+        padding: 8px 16px;
+        font-size: small;
+    }
 }
 
-/* VIDEO */
+/* CARDS - LARGE DEVICES RESPONSIVE */
+@media (min-width: 1024px) { 
+    .container-index {
+        grid-template-columns: repeat(4, 1fr); /* Tres columnas en pantallas grandes */
+        padding: 15px; 
+        gap: 15px; 
+    }
+    .product-card {
+        padding: 20px; 
+        gap: 20px;
+    }
+}
 
+@media (min-width: 601px) and (max-width: 1024px) {
+    #novedades {
+        height: 53rem;
+    }
+    .container-index {
+        grid-template-columns: repeat(2, 1fr); 
+        padding: 15px; 
+        gap: 20px; 
+    }
+    .product-card {
+        padding: 18px; 
+        gap: 18px;
+    }
+    .product-card span {
+        font-size: large; 
+    }
+    .btn-add-cart {
+        padding: 10px 20px; 
+        font-size: medium;
+    }
+}
+
+/* ------------ VIDEO SECTION ----------------*/
 #video-section {
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: antiquewhite;
+    background-color: #A7211D;
     height: 500px;
-    margin: 20px 0;
+    margin-top: 3rem;
+    margin-right: 20px;
+    border-radius: 3px 90px 70px 0;
 }
 
 .video-container {
@@ -68,22 +165,57 @@
     padding: 30px;
 }
 
+.ratio {
+    border: 9px double #FBE8DA;
+}
+
 .video-description {
     width: 80%;
     height: 100%;
     font-size: 20px;
-    color: black;
+    color: #FBE8DA;
     padding: 15px;
     font-family: "Bebas Neue", sans-serif;
     font-style: normal;
 }
+
 .btn-video {
     padding: 6px;
     text-decoration: none;
-    background-color: #f0f0f0;
+    background-color: #FBE8DA;
     color: black;
     border: black 2px solid;
 }
+
+/* VIDEO - MOBILE DEVICES RESPONSIVE */
+@media (max-width: 768px) {
+    #video-section {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        margin-top: auto;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .video-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .video-description {
+        width: 100%;
+        font-size: 18px;
+        padding: 15px 0;
+    }
+
+    .btn-video {
+        padding: 8px;
+        font-size: medium;
+    }
+}
+
 /* RESEÑAS */
 #resenias {
     margin: 20px;
@@ -110,7 +242,11 @@
     margin: 20px;
 }
 
-.resenia-text{
+.resenia-card:hover {
+   transform: translateY(-5px);
+}
+
+.resenia-text {
     padding: 5px;
     text-align: center;
     font-size: 20px;
@@ -124,20 +260,24 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: tomato;
+    object-fit: cover;
 }
 
 .resenias-title {
     text-align: center;
     margin-top: 40px;
+    letter-spacing:3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 
 /* FORM */
 
 #form-section {
     margin: 20px 0;
     margin-bottom: 0;
-    background-color: #fcf3e3;
+    background-color: #A7211D;
+    letter-spacing: 1px;
 }
 
 #form {
@@ -147,6 +287,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
     font-style: normal;
+    color: #FBE8DA;
 }
 
 #form h1 {
@@ -156,11 +297,13 @@
 
 #form label {
     display: block;
-    margin: 20px 0;
-    margin-left: 10px;
+    margin: 5px 0;
+    margin-left: 2px;
 }
 
-#form input, textarea, .form > button {
+#form input,
+textarea,
+.form>button {
     width: 100%;
     padding: 10px;
     outline: none;
@@ -169,51 +312,30 @@
     border-bottom: 1px solid #d3d3d3;
     border-radius: 10px;
     box-sizing: border-box;
-    margin: 5px;
+    margin-bottom: 10px;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
     border-bottom: 1px solid black;
 }
 
 @media (max-width: 768px) {
-    #video-section {
-        margin: 0;
-    }
-
-    .video-container {
-        border: none;
-        flex-wrap: wrap;
-        margin: 0;
-    }
-
-    .video-description h1 {
-        text-align: center;
-    }
-
-    .video-description {
-        font-size: 14px;
-        text-align: center;
-        width: 100%;
-    }
-
     .resenias-container img {
         width: 90px;
     }
 
-    .resenia-text{
+    .resenia-text {
         font-size: 15px;
     }
-    
+
     #resenias {
         margin: 20px;
-        height: 63rem;
+        height: auto;
     }
 
-}
-
-@media (max-width:768px) {
-    #form{
+    #form {
         width: 100%;
     }
 }

@@ -91,35 +91,49 @@
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
-
+		
+		<!-- NOVEDADES -->
 		<section id="novedades">
-			<h2>NOVEDADES</h2>
+			<h2>MÁS VENDIDOS</h2>
 			<div class="container-index">
-				<div class="product-card">
-					<img src="img/guitar.jfif" alt="">
-					<h5>Fender Stratocaster</h5>
-					<span>$1000</span>
+				<div class="product-card" data-id="1">
+					<img src="/img/guitar.jfif" alt="">     
+					<div class="info"> 
+						<h5>Fender Stratocaster</h5>
+						<span>$1000</span>            
+					</div>       
 					<button class="btn-add-cart">Agregar al carrito</button>
 				</div>
-				<div class="product-card">
-					<img src="img/guitar2.jpg" alt="">
-					<h5>Fender Jazzmaster</h5>
-					<span>$1000</span>
+				<div class="product-card" data-id="2">
+					<img src="/img/guitar2.jpg" alt="">
+					<div class="info">
+						<h5>Fender Jazzmaster</h5>
+						<span>$1400</span>
+					</div>
 					<button class="btn-add-cart">Agregar al carrito</button>
 				</div>
-				<div class="product-card">
-					<img src="img/guitar3.jpg" alt="">
-					<h5>Squier Stratocaster</h5>
-					<span>$1000</span>
+				<div class="product-card" data-id="3">
+					<img src="/img/guitar3.jpg" alt="">
+					<div class="info"> 
+						<h5>Squier Stratocaster</h5>
+						<span>$1000</span>
+					</div>
+					<button class="btn-add-cart">Agregar al carrito</button>
+				</div>
+				<div class="product-card" data-id="4">
+					<img src="/img/guitar4.jpg" alt="">     
+					<div class="info"> 
+						<h5>Fender Telecaster</h5>
+						<span>$1500</span>            
+					</div>       
 					<button class="btn-add-cart">Agregar al carrito</button>
 				</div>
 			</div>
 		</section>
 
-		<!-- NOVEDADES -->
 		<section id="video-section">
 			<div class="video-container">
-				<div class="ratio ratio-16x9">
+				<div class="ratio" style="--bs-aspect-ratio: 55%;">
 					<iframe src="https://www.youtube.com/embed/Si1G3uOXq74?si=poBXB9bSXNomNx7T"
 						title="YouTube video player" frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -141,29 +155,29 @@
 			<h2 class="resenias-title">Qué dicen nuestros clientes</h2>
 			<div class="resenias-container">
 				<div class="resenia-card">
-					<div class="foto"></div>
-					<div class="rating"> <img src="img/rating.png" alt=""></div>
+					<img class="foto" src="https://plus.unsplash.com/premium_photo-1688740375397-34605b6abe48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZmlsZSUyMHBpY3xlbnwwfHwwfHx8MA%3D%3D"/>
+					<div class="rating"> <img src="/img/rating.png" alt=""></div>
 					<div class="resenia-text">
 						<q>La mejor tienda de música de la ciudad. Los empleados son muy amables y conocen mucho sobre
 							instrumentos.</q>
 					</div>
-					<cite>Juan Perez</cite>
+					<cite>Valentina Ríos</cite>
 				</div>
 				<div class="resenia-card">
-					<div class="foto"></div>
-					<div class="rating"> <img src="img/rating.png" alt=""></div>
+					<img class="foto" src="https://plus.unsplash.com/premium_photo-1689977968861-9c91dbb16049?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZSUyMHBpY3xlbnwwfHwwfHx8MA%3D%3D"/>
+					<div class="rating"> <img src="/img/rating.png" alt=""></div>
 					<div class="resenia-text">
 						<q>Excelente atención y gran variedad de instrumentos. ¡Encontré justo lo que buscaba!</q>
 					</div>
 					<cite>Juan Perez</cite>
 				</div>
 				<div class="resenia-card">
-					<div class="foto"></div>
-					<div class="rating"> <img src="img/rating.png" alt=""></div>
+					<img class="foto" src="https://plus.unsplash.com/premium_photo-1688350808212-4e6908a03925?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmlsZSUyMHBpY3xlbnwwfHwwfHx8MA%3D%3D"/>
+					<div class="rating"> <img src="/img/rating.png" alt=""></div>
 					<div class="resenia-text">
 						<q>El personal es super amable y paciente, me ayudaron a elegir mi primer guitarra con mucho profesionalismo.</q>
 					</div>
-					<cite>Juan Perez</cite>
+					<cite>Clara Santoro</cite>
 				</div>
 			</div>
 		</section>
@@ -173,12 +187,12 @@
 			<form id="form" action="https://formspree.io/f/xdknqeqd" method="post">
 				<h1>Contáctenos</h1>
 				<label for="nombre">Nombre:</label>
-				<input type="text" name="nombre" id="nombre" placeholder="Nombre">
+				<input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
 				<label for="email">Email:</label>
-				<input type="email" name="email" id="email" placeholder="Email">
+				<input type="email" name="email" id="email" placeholder="email@email.com">
 				<label for="mensaje">Mensaje:</label>
 				<textarea name="mensaje" id="mensaje" rows="4" cols="50"
-					placeholder="Escriba aqui su mensaje"></textarea>
+					placeholder="Escriba aquí su mensaje"></textarea>
 				<button type="submit" id="btnEnviar">Enviar</button>
 			</form>
 		</section>
@@ -196,7 +210,7 @@
 
 	<script src="/talento-tech/js/menu.js"></script>
 	<script src="/talento-tech/js/carrito.js"></script>
-	<script src="/talento-tech/js/products.js"></script>
+	<script src="/talento-tech/js/index.js"></script>
 	<script src="/talento-tech/js/form.js"></script>
 </body>
 

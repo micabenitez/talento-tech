@@ -33,6 +33,13 @@ function mostrarProductos(products) {
             <button class="btn-add-cart">Agregar al carrito</button>
         `;
         productsContainer.appendChild(card);
+        const productImage = card.querySelector('img');
+
+        productImage.addEventListener("click", (e) => {
+            localStorage.setItem("selectedProduct", JSON.stringify(product));
+            e.stopPropagation();
+            window.location.href = `productInfo.html?id=${product._id}`;
+        });
     });
 }
 

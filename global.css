@@ -3,12 +3,14 @@ body {
     padding: 0;
     margin: 0;
 }
-
+main {
+    background-color: #FBFFF1;
+}
 header {
     display: block;
-    background-color: #a7211d;
+    background-color: #000000;
     font-family: "Anton", sans-serif;
-    color: #ffeccd;
+    color: #d3d3d3;
     font-style: normal;
 }
 
@@ -19,7 +21,7 @@ nav {
 }
 
 .active {
-    color: #dd9b58;
+    color: #F4D58D;
 }
 
 .nav-list {
@@ -312,7 +314,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #751405;
+    background-color: black;
     color: #e7d6af;
     padding: 10px;
     height: 13rem;

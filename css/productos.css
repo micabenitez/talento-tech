@@ -13,20 +13,27 @@
 .container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 18px;
+    row-gap: 30px;
     flex-wrap: wrap;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
+.product-card h5 {
+    margin-bottom: 0;
+}
+
 .product-card {
     display: flex;
     flex-direction: column;
     width: 270px;
-    gap: 25px;
+    height: 450px;
+    gap: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    padding: 25px;
+    padding: 12px;
+    border: 1px solid #d3d3d3;
 }
 
 .product-card .info {
@@ -34,13 +41,15 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
-    margin-top: 15px;
+    /* margin-top: 13px; */
+    padding: 0 20px;
 }
 
 .product-card img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 60%;
+    object-fit: contain;
+    padding: 8px;
 }
 
 .total #precio-total {
@@ -49,12 +58,12 @@
 }
 
 .btn-add-cart {
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: #a7211d;
     color: #fff;
     border: none;
     cursor: pointer;
-    border-radius: 5rem;
+    border-radius: 12px;
     width: 11rem;
     align-self: center;
 }

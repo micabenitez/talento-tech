@@ -6,6 +6,7 @@ const cartBody = document.querySelector('#cart-body');
 const totalCompra = document.querySelector('#precio-total');
 const cartCounter = document.querySelector('.cont-products');
 const btnCerrarCarrito = document.querySelector('#cart-close');
+const container = document.querySelector(".container-index");
 
 btnCerrarCarrito.addEventListener('click', () => {
     cartContent.classList.add('carrito-closed');
@@ -36,14 +37,26 @@ btnCarrito.addEventListener('click', () => {
     }
 })
 
-btnAddCart.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const product = JSON.parse(btn.dataset.product);
+container.addEventListener('click', (event) => {
+    if (event.target.classList.contains('btn-add-cart')) {
+        const btn = event.target;
+        const productCard = btn.closest('.product-card');
+   
+        const imageUrl = productCard.querySelector('img').src; 
+        const url = new URL(imageUrl);
+        const path = url.pathname; 
+
+        const product = {
+            id: productCard.getAttribute('data-id'),
+            name: productCard.querySelector('h5').textContent,
+            precio: productCard.querySelector('span').textContent,
+            img_url: path,
+            qty: 1
+        };
         agregarAlCarrito(product);
         actualizarCarrito();
-    })
-})
-
+    }
+});
 function agregarAlCarrito(productData) {
     const existe = carrito.some(product => product.name === productData.name);
     if (existe) {
@@ -57,14 +70,12 @@ function agregarAlCarrito(productData) {
 }
 
 function actualizarCarrito() {
-    const totalElement = document.getElementById("#total");
-
     if (carrito.length === 0) {
         cartBody.appendChild(carritoVacio);
         return;
     }
 
-    cartBody.innerHTML = ''; // limpiar la lista actual
+    cartBody.innerHTML = '';
     total = 0;
 
     carrito.forEach(product => {
@@ -93,13 +104,14 @@ function actualizarCarrito() {
         });
 
         cartBody.appendChild(card);
-        total += parseInt(product.precio.slice(1) * parseInt(product.qty)); 
+        total += parseInt(product.precio.slice(1)) * parseInt(product.qty); 
         totalCompra.textContent = `$${total.toFixed(2)}`;
         cartCounter.textContent = carrito.length;
     })
 }
 
 function eliminarProducto(id) {
+    console.log(carrito);
     const product = carrito.find(product => product.id === id);
     if (product.qty > 1) {
         product.qty--;
