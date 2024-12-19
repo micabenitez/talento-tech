@@ -7,12 +7,17 @@ const totalCompra = document.querySelector('#precio-total');
 const cartCounter = document.querySelector('.cont-products');
 const btnCerrarCarrito = document.querySelector('#cart-close');
 const container = document.querySelector(".container-index");
+const btnComprar = document.querySelector('.btn-comprar');
 const carritoVacio = document.createElement("div");
 carritoVacio.className = "carrito-vacio";
 carritoVacio.innerHTML = `<p>No hay productos en el carrito</p>`;
 
 btnCerrarCarrito.addEventListener('click', () => {
     cartContent.classList.add('carrito-closed');
+})
+
+btnComprar.addEventListener('click', () => {
+    window.location.href = 'pago.html';
 })
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
