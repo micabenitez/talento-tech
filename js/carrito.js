@@ -7,6 +7,9 @@ const totalCompra = document.querySelector('#precio-total');
 const cartCounter = document.querySelector('.cont-products');
 const btnCerrarCarrito = document.querySelector('#cart-close');
 const container = document.querySelector(".container-index");
+const carritoVacio = document.createElement("div");
+carritoVacio.className = "carrito-vacio";
+carritoVacio.innerHTML = `<p>No hay productos en el carrito</p>`;
 
 btnCerrarCarrito.addEventListener('click', () => {
     cartContent.classList.add('carrito-closed');
@@ -15,10 +18,7 @@ btnCerrarCarrito.addEventListener('click', () => {
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 localStorage.setItem('carrito', JSON.stringify(carrito));
 
-const carritoVacio = document.createElement("div");
-carritoVacio.className = "carrito-vacio";
-carritoVacio.innerHTML = `<p>No hay productos en el carrito</p>`;
-
+// VACIAR CARRITO
 btnVaciar.addEventListener('click', () => {
     cartBody.innerHTML = '';
     cartBody.appendChild(carritoVacio);
@@ -29,6 +29,7 @@ btnVaciar.addEventListener('click', () => {
     cartCounter.textContent = 0; 
 })
 
+// CERRAR CARRITO
 btnCarrito.addEventListener('click', () => {
     cartContent.classList.toggle('carrito-closed');
     
@@ -62,11 +63,25 @@ function agregarAlCarrito(productData) {
     if (existe) {
         const product = carrito.find(product => product.name === productData.name);
         product.qty++;
+        cartCounter.textContent = JSON.parse(localStorage.getItem('carrito')).length + 1;
+        mostrarModal();
         return;
     } else {
         carrito = [...carrito, productData];
     }
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+    localStorage.setItem('carrito', JSON.stringify(carrito)); 
+    contadorCarrito();
+    mostrarModal();
+    
+}
+function mostrarModal(){
+    const modal = document.createElement("div");
+    modal.className = "modal-producto-agregado";
+    modal.textContent = "¡Producto agregado al carrito!";
+    btnCarrito.appendChild(modal);
+    setTimeout(() => {
+        modal.remove();
+    }, 2000);    
 }
 
 function actualizarCarrito() {
@@ -84,7 +99,7 @@ function actualizarCarrito() {
         card.setAttribute("data-id", product.id);
         card.innerHTML = `
             <img src=${product.img_url} alt="">
-            <div class="info">
+            <div class="p-info">
                 <h5>${product.name}</h5>
                 <span>${product.precio}</span>
             </div>
@@ -106,12 +121,10 @@ function actualizarCarrito() {
         cartBody.appendChild(card);
         total += parseInt(product.precio.slice(1)) * parseInt(product.qty); 
         totalCompra.textContent = `$${total.toFixed(2)}`;
-        cartCounter.textContent = carrito.length;
     })
 }
 
 function eliminarProducto(id) {
-    console.log(carrito);
     const product = carrito.find(product => product.id === id);
     if (product.qty > 1) {
         product.qty--;

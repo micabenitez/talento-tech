@@ -10,6 +10,9 @@ header {
     font-family: "Raleway", "sans-serif";
     font-weight: 800;
     color: #f5f2ea;
+    top: 0;
+    position: sticky;
+    z-index: 999;
 }
 
 nav {
@@ -61,6 +64,7 @@ nav {
 
 .btn-cart {
     border: none;
+    position: relative;
     background-color: transparent;
     cursor: pointer;
     color: white;
@@ -72,7 +76,7 @@ nav {
 
 .carrito-header{
     color: black;
-    font-size: large;
+    font-size: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,13 +88,13 @@ nav {
 }
 
 .carrito-content {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Raleway';
     position: absolute;
     padding: 1rem 2rem 0.2rem 2rem;
-    top: 3rem;
-    right: 0;
+    top: 3.5rem;
+    right: 1.2rem;
     background-color: white;
-    width: 30rem;
+    width: 34rem;
     height: auto;
     z-index: 999;
     display: flex;
@@ -99,6 +103,7 @@ nav {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border: 1px solid #d3d3d3;
 }
+
 .cont-products {
     font-size: 15px;
 }
@@ -125,6 +130,10 @@ nav {
     display: none;
 }
 
+#cart-close i {
+    font-size: 25px;
+}
+
 .cart-card {
     display: flex;
     justify-content: space-around;
@@ -132,6 +141,20 @@ nav {
     padding: 10px;
     border-bottom: 1px solid #d3d3d3;
     color: black;
+}
+
+.p-info {
+    align-self: center;
+}
+
+.p-info span {
+    font-size: large;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+}
+
+.cart-card h5 {
+    font-size: 18px;
 }
 
 .cart-card img {
@@ -172,11 +195,47 @@ nav {
     padding: 2px;
 }
 
-.logo  img{
+.total span {
+    font-weight: 400;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.comprar {
+    align-self: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.btn-comprar {
+    border: none;
+    background-color: #910118;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 18px ;
+}
+
+.modal-producto-agregado {
+    position: absolute;
+    top: 3rem;
+    right: 1px;
+    padding: 10px;
+    color: white;
+    width: 16rem;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    background-color: #910118;
+    z-index: 9999;
+}
+
+.logo img{
     height: 50px;
     width: 50px;
     margin-left: 30px;
-    /* padding: 7px; */
 }
 
 .nav-link:hover {
@@ -200,7 +259,7 @@ nav {
 
 @media (max-width: 768px) {
     header {
-        position: relative;
+        position: sticky;
         display: block;
         width: 100%;
         top: 0;
@@ -224,7 +283,7 @@ nav {
         position: fixed;
         left: -100%;
         top: 0;
-        background-color: #a7211d;
+        background-color: #000000;
         width: 100%;
         height: 100%;
         padding: 20px;
@@ -264,7 +323,6 @@ nav {
         margin-top: 20px;
         display: flex;
         font-size: 20px;
-        font-family: "Anton", sans-serif;
     }
 
     .nav-list {
@@ -285,7 +343,7 @@ nav {
         right: 0;
         width: 100%;
         height: 100%;
-        background-color: #f2e8df;
+        padding: 10px 15px;
         z-index: 3;
         overflow-y: scroll;
     }
@@ -297,8 +355,8 @@ nav {
     #cart-close {
         display: block;
         position: absolute;
-        top: 15px;
-        right: 50px;
+        top: 6px;
+        right: 20px;
     }
 }
 
