@@ -34,6 +34,10 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 12px;
     border: 1px solid #d3d3d3;
+    box-sizing: border-box;
+    font-family: "Raleway", "sans-serif";
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .product-card .info {
@@ -43,6 +47,11 @@
     gap: 5px;
     /* margin-top: 13px; */
     padding: 0 20px;
+}
+
+.info span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
 }
 
 .product-card img {
@@ -60,7 +69,7 @@
 
 .btn-add-cart {
     padding: 10px 15px;
-    background-color: #a7211d;
+    background-color: #910118;
     color: #fff;
     border: none;
     cursor: pointer;

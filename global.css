@@ -3,25 +3,24 @@ body {
     padding: 0;
     margin: 0;
 }
-main {
-    background-color: #FBFFF1;
-}
+
 header {
     display: block;
     background-color: #000000;
-    font-family: "Anton", sans-serif;
-    color: #d3d3d3;
-    font-style: normal;
+    font-family: "Raleway", "sans-serif";
+    font-weight: 800;
+    color: #f5f2ea;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 5rem;
 }
 
 .active {
-    color: #F4D58D;
+    color: #e4a050;
 }
 
 .nav-list {
@@ -44,8 +43,8 @@ nav {
 .nav-list {
     list-style: none;
     margin: 0;
-    padding: 10px;
-    font-size: 22px;
+    padding: 2px;
+    font-size: 18px;
 }
 
 .nav-item {
@@ -100,16 +99,18 @@ nav {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border: 1px solid #d3d3d3;
 }
+.cont-products {
+    font-size: 15px;
+}
 
 .carrito-counter {
     position: absolute;
-    top: 2px;
-    right: 0;
+    top: 3px;
+    right: 3px;
     background-color: red;
     color: white;
-    padding: 5px 10px;
+    padding: 2px 8px;
     border-radius: 50%;
-    font-size: 13px;
 }
 
 #cart-body {
@@ -171,9 +172,11 @@ nav {
     padding: 2px;
 }
 
-.logo img {
-    height: 70px;
-    width: 70px;
+.logo  img{
+    height: 50px;
+    width: 50px;
+    margin-left: 30px;
+    /* padding: 7px; */
 }
 
 .nav-link:hover {
@@ -311,13 +314,13 @@ nav {
 }
 
 footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     background-color: black;
-    color: #e7d6af;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
     padding: 10px;
-    height: 13rem;
 }
 
 footer p {
@@ -327,4 +330,24 @@ footer p {
 
 footer img {
     width: 200px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.logo-redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+
+}
+.logo-redes i {
+    font-size: 27px;
 }

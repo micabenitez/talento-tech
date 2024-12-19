@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     margin: 25px 30px;
-    height: 37rem;
+    height: 36rem;
     background-color: white;
 }
 
@@ -31,8 +31,22 @@
     align-items: center;
     gap: 20px;
     box-shadow: rgba(179, 178, 178, 0.2) 0px 2px 8px 0px;
-    padding: 20px;
+    padding: 25px;
     border: 1px solid #d3d3d3;
+    box-sizing: border-box;
+}
+
+.info {
+    align-self: flex-start;
+    margin: 0 15px;
+    font-family: "Raleway", "sans-serif";
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.info span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
 }
 
 .product-card img {
@@ -48,7 +62,7 @@
 
 .btn-add-cart {
     padding: 10px 20px;
-    background-color: #a7211d;
+    background-color: #910118;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -57,21 +71,21 @@
 
 /* CARDS - MOBILE DEVICES RESPONSIVE */
 @media (max-width: 768px) {
-    #novedades {        
+    #novedades {
         height: auto;
-       align-items: center;
+        align-items: center;
     }
 
     .container-index {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
         padding: 10px;
-        gap: 15px; 
+        gap: 15px;
         width: 90%;
     }
 
     .product-card {
         padding: 15px;
-        gap: 15px; 
+        gap: 15px;
     }
 
     .product-card span {
@@ -89,6 +103,7 @@
     #novedades {
         height: auto;
     }
+
     .container-index {
         grid-template-columns: repeat(1, 1fr);
         padding: 10px;
@@ -110,37 +125,28 @@
     }
 }
 
-/* CARDS - LARGE DEVICES RESPONSIVE */
-@media (min-width: 1024px) { 
-    .container-index {
-        grid-template-columns: repeat(4, 1fr); /* Tres columnas en pantallas grandes */
-        padding: 15px; 
-        gap: 15px; 
-    }
-    .product-card {
-        padding: 20px; 
-        gap: 20px;
-    }
-}
-
 @media (min-width: 601px) and (max-width: 1024px) {
     #novedades {
         height: 53rem;
     }
+
     .container-index {
-        grid-template-columns: repeat(2, 1fr); 
-        padding: 15px; 
-        gap: 20px; 
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+        gap: 20px;
     }
+
     .product-card {
-        padding: 18px; 
+        padding: 18px;
         gap: 18px;
     }
+
     .product-card span {
-        font-size: large; 
+        font-size: large;
     }
+
     .btn-add-cart {
-        padding: 10px 20px; 
+        padding: 10px 20px;
         font-size: medium;
     }
 }
@@ -150,7 +156,7 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #A7211D;
+    background-color: #910118;
     height: 500px;
     margin-top: 3rem;
     margin-right: 20px;
@@ -166,25 +172,43 @@
 }
 
 .ratio {
-    border: 9px double #FBE8DA;
+    border: 9px double #f5f2ea;
 }
 
 .video-description {
     width: 80%;
     height: 100%;
-    font-size: 20px;
-    color: #FBE8DA;
+    font-size: 17px;
+    color: #f5f2ea;
     padding: 15px;
-    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.video-description p {
+    font-family: "Victor Mono", "sans-serif";
+    font-optical-sizing: auto;
+    font-weight: 500;
     font-style: normal;
 }
 
+.video-description h1 {
+    font-family: "Raleway", "sans-serif";
+    font-weight: 700;
+    font-size: 40px;
+}
+
 .btn-video {
-    padding: 6px;
-    text-decoration: none;
-    background-color: #FBE8DA;
+    padding: 10px 20px;
+    background-color: #f5f2ea;
+    width: 20%;
     color: black;
-    border: black 2px solid;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 10rem;
 }
 
 /* VIDEO - MOBILE DEVICES RESPONSIVE */
@@ -219,7 +243,7 @@
 /* RESEÑAS */
 #resenias {
     margin: 20px;
-    height: 25rem;
+    height: 26rem;
 }
 
 .resenias-container {
@@ -233,7 +257,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     box-sizing: border-box;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background-color: white;
@@ -243,7 +267,7 @@
 }
 
 .resenia-card:hover {
-   transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .resenia-text {
@@ -266,18 +290,35 @@
 .resenias-title {
     text-align: center;
     margin-top: 40px;
-    letter-spacing:3px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 3px;
+    font-family: "Raleway", "sans-serif";
+    letter-spacing: 4px;
+    font-weight: 600;
 }
-
 
 /* FORM */
 
 #form-section {
     margin: 20px 0;
     margin-bottom: 0;
-    background-color: #A7211D;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    position: relative;
+    margin-top: 4rem;
+    background-image: url("https://img.freepik.com/free-photo/electric-guitar-notepad-music-speaker-table-room-top-view_169016-52223.jpg?t=st=1734551016~exp=1734554616~hmac=bc739ff79904e3823ab5d03ad7ab8b3c92c5e6891421e4807ecf98f1d33cf583&w=740");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 #form {
@@ -285,14 +326,21 @@
     padding: 30px;
     margin: auto;
     box-sizing: border-box;
-    font-family: sans-serif;
-    font-style: normal;
-    color: #FBE8DA;
+    font-family: "Raleway", "sans-serif";
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: white;
+    border-radius: 5%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 #form h1 {
     text-align: center;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 #form label {
@@ -319,6 +367,17 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
     border-bottom: 1px solid black;
+}
+
+#form>button {
+    background-color: #910118;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
