@@ -17,7 +17,7 @@ btnCerrarCarrito.addEventListener('click', () => {
 })
 
 btnComprar.addEventListener('click', () => {
-    window.location.href = '/pages/pago.html';
+    window.location.href = '/talento-tech/pages/pago.html';
 })
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
