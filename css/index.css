@@ -417,8 +417,4 @@ textarea:focus {
         margin: 20px;
         height: auto;
     }
-
-    #form {
-        width: 100%;
-    }
 }

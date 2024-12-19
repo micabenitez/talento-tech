@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="/talento-tech/img/logo.ico" type="image/x-icon" />
+	<link rel="icon" href="/talento-tech/img/logo.ico" type="image/x-icon"/>
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="/talento-tech/global.css">
 	<link rel="stylesheet" href="/talento-tech/css/productos.css">
 	<link rel="stylesheet" href="/talento-tech/css/productInfo.css">
+	<link rel="stylesheet" href="/talento-tech/css/form.css">
 	<title>Guitar Shop</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
 				<ul class="nav-list">
 					<li class="nav-item"><a class="nav-link" href="/talento-tech/index.html">HOME</a></li>
 					<li class="nav-item active"><a class="nav-link" href="productos.html">PRODUCTOS</a></li>
-					<li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
+					<li class="nav-item"><a class="nav-link" href="#form-section">CONTACTO</a></li>
 				</ul>
 				<div class="nav-close" id="nav-close">
 					<i class="ri-close-large-line"></i>
@@ -70,6 +71,22 @@
 	</header>
     <main>
         <section class="product-info"></section>
+		<!-- CONTACTO -->
+		<section id="form-section">
+			<div class="overlay"></div>
+			<form id="form" action="https://formspree.io/f/xdknqeqd" method="post">
+				<h1>Contactanos</h1>
+				<label for="nombre">Nombre:</label>
+				<input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+				<label for="email">Email:</label>
+				<input type="email" name="email" id="email" placeholder="email@email.com">
+				<label for="mensaje">Mensaje:</label>
+				<textarea name="mensaje" id="mensaje" rows="4" cols="50"
+					placeholder="Escriba aquí su mensaje"></textarea>
+				<button type="submit" id="btnEnviar">Enviar</button>
+			</form>
+		</section>
+
     </main>
     <footer>
 		<img src="/talento-tech/img/brand.png" alt="">
@@ -91,5 +108,6 @@
 	<script src="/talento-tech/js/menu.js"></script>
 	<script src="/talento-tech/js/carrito.js"></script>
 	<script src="/talento-tech/js/productInfo.js"></script>
+	<script src="/talento-tech/js/form.js"></script>
 </body>
 </html>
