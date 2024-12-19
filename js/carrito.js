@@ -17,7 +17,7 @@ btnCerrarCarrito.addEventListener('click', () => {
 })
 
 btnComprar.addEventListener('click', () => {
-    window.location.href = 'pago.html';
+    window.location.href = 'pages/pago.html';
 })
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
