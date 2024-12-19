@@ -2,12 +2,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 15px;
     padding: 10px;
 }
 
 .products-section .products-title {
-    padding: 30px;
+    padding: 20px;
+}
+
+.products-title {
+    font-family: "Ruleway", sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 0;
 }
 
 .container {
@@ -45,7 +51,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
-    /* margin-top: 13px; */
     padding: 0 20px;
 }
 
@@ -84,12 +89,61 @@
 
 @media (max-width: 768px) {
     .product-card {
-        width: 95%;
+        width: 80%;
         height: 100%;
+        padding: 25px;
+        gap: 10px;
     } 
-    
-    .container {
-        gap: 2rem;
+
+    .product-card img {
+       padding: 10px;
+    }
+
+    .product-card .info {
+        margin: 0 8px;
+    }
+
+    .product-card h5 {
+        font-size: 20px;
+    }
+
+    .product-card span {
+        font-size: medium;
+    }
+
+    .btn-add-cart {
+        padding: 8px 16px;
+        font-size: small;
     }
     
+    .container {
+        padding: 15px;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .product-card {
+        width: 47%;
+        height: 20rem;
+        padding: 8px;
+        gap: 10px;
+    }
+
+    .product-card img {
+        padding: 0;
+        object-fit: contain;
+    }
+
+    .product-card .info {
+        margin: 0 8px;
+        padding: 0 5px;
+    }
+
+    .product-card h5 {
+        font-size: 15px;
+    }
+    .container {
+        padding: 0;
+    }
 }

@@ -205,7 +205,6 @@ nav {
         width: 100%;
         top: 0;
         left: 0;
-        background-color: #a7211d;
     }
 
     nav {
@@ -301,7 +300,6 @@ nav {
         top: 15px;
         right: 50px;
     }
-
 }
 
 .show-menu {
@@ -317,6 +315,7 @@ footer {
     background-color: black;
     color: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     gap: 10px;

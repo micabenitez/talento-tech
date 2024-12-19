@@ -1,18 +1,24 @@
 .product-info {
     width: 100%; 
-    height: 27rem; 
+    height: 31rem; 
     padding: 30px;
     letter-spacing: 2px;
+    display: flex;
+    align-items: center;
 }
 
 .product-info h2 {
     font-size: 2rem;
+    font-family: "Victor Mono", "sans-serif";
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 .product-info p {
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 500;
+    margin-bottom: 0;
 }
 
 .product-details {
@@ -21,13 +27,26 @@
     justify-content: space-evenly;
     padding: 23px; 
     width: 80%; 
-    gap: 10px;
+    gap: 8px;
+    font-family: "Raleway", "sans-serif";
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.product-details span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    letter-spacing: 3px;
 }
 
 .product-img img {
     width: 100%;
     height: 22rem;
     object-fit: contain;
+}
+
+.product-details button {
+    align-self: flex-start;
 }
 
 .product-details-container {
