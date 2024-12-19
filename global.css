@@ -23,7 +23,7 @@ nav {
 }
 
 .active {
-    color: #e4a050;
+    border-bottom: 4px solid white;
 }
 
 .nav-list {
